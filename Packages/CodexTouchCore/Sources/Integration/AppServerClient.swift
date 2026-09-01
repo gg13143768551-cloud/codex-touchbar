@@ -53,13 +53,15 @@ public actor AppServerClient: AppServerRPC {
         process.standardError = stderrPipe
         stdoutPipe.fileHandleForReading.readabilityHandler = { [weak self] handle in
             let data = handle.availableData
-            guard !data.isEmpty else { return }
-            Task { await self?.consume(data, generation: generation) }
+            guard !data.isEmpty, let client = self else { return }
+            Task { await client.consume(data, generation: generation) }
         }
         // Drain stderr without recording its content; otherwise a noisy process can block.
         stderrPipe.fileHandleForReading.readabilityHandler = { handle in _ = handle.availableData }
         process.terminationHandler = { [weak self] process in
-            Task { await self?.processTerminated(status: process.terminationStatus, generation: generation) }
+            guard let client = self else { return }
+            let status = process.terminationStatus
+            Task { await client.processTerminated(status: status, generation: generation) }
         }
         self.process = process
         self.stdinPipe = stdinPipe

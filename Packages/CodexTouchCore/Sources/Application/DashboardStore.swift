@@ -163,7 +163,7 @@ public final class DashboardStore {
         )
     }
 
-    private func withSelection(_ selection: ModelSelection, pendingWrite: Bool, errorMessage: String?) -> AppSnapshot {
+    private func withSelection(_ selection: ModelSelection?, pendingWrite: Bool, errorMessage: String?) -> AppSnapshot {
         AppSnapshot(
             profile: snapshot.profile,
             serverCodexHome: snapshot.serverCodexHome,
