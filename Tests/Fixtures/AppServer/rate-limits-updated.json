@@ -1,0 +1,1 @@
+{"jsonrpc":"2.0","method":"account/rateLimits/updated","params":{"rateLimits":{"primary":{"windowDurationMins":300,"usedPercent":27,"resetsAt":1798848000}}}}

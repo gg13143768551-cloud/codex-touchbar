@@ -1,0 +1,21 @@
+name: macOS
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test
+        run: bash Scripts/build-macos.sh
+
+  static-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Static verification
+        shell: pwsh
+        run: ./Scripts/verify-static.ps1

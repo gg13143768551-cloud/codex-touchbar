@@ -1,0 +1,76 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000010000000000000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000001 /* AppDelegate.swift */; };
+		A00000010000000000000002 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000002 /* MenuBarController.swift */; };
+		A00000010000000000000003 /* TouchBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000003 /* TouchBarProvider.swift */; };
+		A00000010000000000000004 /* TouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000004 /* TouchBarController.swift */; };
+		A00000010000000000000005 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000005 /* PreferencesWindowController.swift */; };
+		A00000010000000000000006 /* CodexTouchCore in Frameworks */ = {isa = PBXBuildFile; productRef = A00000800000000000000001 /* CodexTouchCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000100000000000000001 /* CodexTouchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodexTouchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000110000000000000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A00000110000000000000002 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		A00000110000000000000003 /* TouchBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarProvider.swift; sourceTree = "<group>"; };
+		A00000110000000000000004 /* TouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarController.swift; sourceTree = "<group>"; };
+		A00000110000000000000005 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		A00000110000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00000110000000000000007 /* CodexTouchBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodexTouchBar.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00000200000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000010000000000000006 /* CodexTouchCore in Frameworks */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00000300000000000000001 = {isa = PBXGroup; children = (A00000300000000000000002, A00000300000000000000003,); sourceTree = "<group>"; };
+		A00000300000000000000002 /* App */ = {isa = PBXGroup; children = (A00000110000000000000001, A00000110000000000000002, A00000110000000000000003, A00000110000000000000004, A00000110000000000000005, A00000110000000000000006, A00000110000000000000007,); path = App; sourceTree = "<group>"; };
+		A00000300000000000000003 /* Products */ = {isa = PBXGroup; children = (A00000100000000000000001,); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00000400000000000000001 /* CodexTouchBar */ = {isa = PBXNativeTarget; buildConfigurationList = A00000600000000000000002; buildPhases = (A00000200000000000000002, A00000200000000000000001, A00000200000000000000004,); buildRules = (); dependencies = (); name = CodexTouchBar; packageProductDependencies = (A00000800000000000000001,); productName = CodexTouchBar; productReference = A00000100000000000000001; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00000500000000000000001 /* Project object */ = {isa = PBXProject; attributes = { LastUpgradeCheck = 1540; ORGANIZATIONNAME = "Codex Touch Bar"; TargetAttributes = { A00000400000000000000001 = { CreatedOnToolsVersion = 15.4; }; }; }; buildConfigurationList = A00000600000000000000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,); mainGroup = A00000300000000000000001; packageReferences = (A00000700000000000000001,); productRefGroup = A00000300000000000000003; projectDirPath = ""; projectRoot = ""; targets = (A00000400000000000000001,); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00000200000000000000004 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00000200000000000000002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000010000000000000001, A00000010000000000000002, A00000010000000000000003, A00000010000000000000004, A00000010000000000000005,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00000610000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; GCC_C_LANGUAGE_STANDARD = gnu17; INFOPLIST_FILE = App/Info.plist; MACOSX_DEPLOYMENT_TARGET = 12.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.codex.touchbar; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A00000610000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CODE_SIGN_STYLE = Automatic; CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = ""; ENABLE_HARDENED_RUNTIME = YES; GCC_C_LANGUAGE_STANDARD = gnu17; INFOPLIST_FILE = App/Info.plist; MACOSX_DEPLOYMENT_TARGET = 12.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.codex.touchbar; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Release; };
+		A00000620000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_ENTITLEMENTS = App/CodexTouchBar.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; INFOPLIST_FILE = App/Info.plist; MACOSX_DEPLOYMENT_TARGET = 12.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.codex.touchbar; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A00000620000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { CODE_SIGN_ENTITLEMENTS = App/CodexTouchBar.entitlements; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; ENABLE_HARDENED_RUNTIME = YES; INFOPLIST_FILE = App/Info.plist; MACOSX_DEPLOYMENT_TARGET = 12.0; MARKETING_VERSION = 0.1.0; PRODUCT_BUNDLE_IDENTIFIER = com.codex.touchbar; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00000600000000000000001 /* Project configuration list */ = {isa = XCConfigurationList; buildConfigurations = (A00000610000000000000001, A00000610000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A00000600000000000000002 /* Target configuration list */ = {isa = XCConfigurationList; buildConfigurations = (A00000620000000000000001, A00000620000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		A00000700000000000000001 /* XCLocalSwiftPackageReference "Packages/CodexTouchCore" */ = {isa = XCLocalSwiftPackageReference; relativePath = Packages/CodexTouchCore; };
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A00000800000000000000001 /* CodexTouchCore */ = {isa = XCSwiftPackageProductDependency; package = A00000700000000000000001 /* XCLocalSwiftPackageReference "Packages/CodexTouchCore" */; productName = CodexTouchCore; };
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A00000500000000000000001 /* Project object */;
+}

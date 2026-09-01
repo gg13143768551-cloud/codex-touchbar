@@ -1,0 +1,1 @@
+{"data":[{"id":"gpt-5","model":"gpt-5","displayName":"GPT-5","description":"Redacted fixture model","hidden":false,"isDefault":true,"defaultReasoningEffort":"medium","supportedReasoningEfforts":[{"reasoningEffort":"low","description":"Faster"},{"reasoningEffort":"medium","description":"Balanced"},{"reasoningEffort":"high","description":"Deep"}]}],"nextCursor":null}

@@ -1,0 +1,17 @@
+{
+  "profiles": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "alias": "Personal",
+      "codexHome": "~/Library/Application Support/CodexTouchBar/Profiles/00000000-0000-0000-0000-000000000001/codex-home"
+    },
+    {
+      "id": "00000000-0000-0000-0000-000000000002",
+      "alias": "Work",
+      "codexHome": "~/Library/Application Support/CodexTouchBar/Profiles/00000000-0000-0000-0000-000000000002/codex-home"
+    }
+  ],
+  "selectedProfileID": "00000000-0000-0000-0000-000000000001",
+  "oneTouchEnabled": false,
+  "codexExecutablePath": null
+}
