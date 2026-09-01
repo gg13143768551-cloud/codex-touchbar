@@ -16,7 +16,8 @@ xcodebuild \
   -target CodexTouchBar \
   -configuration Debug \
   -sdk macosx \
-  -derivedDataPath "$derived_data" \
+  SYMROOT="$derived_data/Build/Products" \
+  OBJROOT="$derived_data/Build/Intermediates.noindex" \
   CODE_SIGNING_ALLOWED=NO \
   CODE_SIGNING_REQUIRED=NO \
   build
