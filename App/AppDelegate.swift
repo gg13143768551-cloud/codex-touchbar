@@ -127,14 +127,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             object: nil,
             queue: .main
         ) { [weak self] _ in
-            Task { @MainActor in await self?.refreshCoordinator?.refresh() }
+            guard let delegate = self else { return }
+            Task { @MainActor in await delegate.refreshCoordinator?.refresh() }
         }
         let timeZone = NotificationCenter.default.addObserver(
-            forName: NSSystemTimeZoneDidChange,
+            forName: NSNotification.Name.NSSystemTimeZoneDidChange,
             object: nil,
             queue: .main
         ) { [weak self] _ in
-                Task { @MainActor in await self?.refreshCoordinator?.refresh() }
+            guard let delegate = self else { return }
+            Task { @MainActor in await delegate.refreshCoordinator?.refresh() }
         }
         systemObserverTokens = [wake, timeZone]
     }
@@ -207,16 +209,18 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         (process.standardOutput as? Pipe)?.fileHandleForReading.readabilityHandler = { handle in _ = handle.availableData }
         (process.standardError as? Pipe)?.fileHandleForReading.readabilityHandler = { handle in _ = handle.availableData }
         process.terminationHandler = { [weak self] finishedProcess in
+            guard let delegate = self else { return }
+            let status = finishedProcess.terminationStatus
             Task { @MainActor in
-                self?.loginProcess = nil
-                if finishedProcess.terminationStatus == 0 {
-                    if self?.store.snapshot.profile.id == profileID {
-                        await self?.refreshCoordinator?.refresh()
+                delegate.loginProcess = nil
+                if status == 0 {
+                    if delegate.store.snapshot.profile.id == profileID {
+                        await delegate.refreshCoordinator?.refresh()
                     } else {
-                        await self?.switchCoordinator?.switchTo(profileID: profileID)
+                        await delegate.switchCoordinator?.switchTo(profileID: profileID)
                     }
                 } else {
-                    await self?.refreshCoordinator?.refresh()
+                    await delegate.refreshCoordinator?.refresh()
                 }
             }
         }
