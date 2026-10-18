@@ -11,6 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build and test
         run: bash Scripts/build-macos.sh
+      - name: Package macOS app
+        run: ditto -c -k --sequesterRsrc --keepParent .build/xcode/Build/Products/Debug/CodexTouchBar.app CodexTouchBar-macos.zip
+      - name: Upload macOS app
+        uses: actions/upload-artifact@v4
+        with:
+          name: CodexTouchBar-macos
+          path: CodexTouchBar-macos.zip
+          if-no-files-found: error
 
   static-windows:
     runs-on: windows-latest
